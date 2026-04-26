@@ -19,6 +19,7 @@ metricas = external_hash_group_by(
 )
 
 resultado_agrupado = metricas.pop('result')
+print(f"\nTotal de grupos unicos encontrados: {len(resultado_agrupado)}")
 
 print("\nMetricas resultantes:")
 print(metricas)
