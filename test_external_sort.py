@@ -6,12 +6,13 @@ def normalizar_fecha(fecha):
     return str(fecha)[0:4]+"-"+str(fecha)[4:6]+"-"+str(fecha)[6:8]
 
 PAGE_SIZE = 4096
-BUFFER_SIZE = 64 * 1024 
+RAM = 64
+BUFFER_SIZE = RAM * 1024 
 
 ruta_bin_employee = 'employee.bin'
 ruta_output_sorted = 'employee_sorted.bin'
 
-print("Iniciando External Sort con RAM de 64 KB...")
+print(f"Iniciando External Sort con RAM de {RAM} KB...")
 
 metricas = external_sort(
     heap_path=ruta_bin_employee, 
